@@ -1,6 +1,5 @@
 # React Authentication
 
-***
 React authentication using mailgun-js to send authentication links to registering users. The feature is during registration, a new user is not created in the database, but generated an encrypted token with the entered data, after confirmation of registration by mail, the data from the token is only then added to the database.
 <br><br>If the user has not yet confirmed his registration, the token will be deleted after 10 minutes.
 <br><br>The same happens with the signing in, a token of the incoming login and password is created, after which the token is decrypted and compared with the data in the database.
