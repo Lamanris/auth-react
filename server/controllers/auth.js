@@ -44,7 +44,7 @@ export const accountActivation = (req,res) => {
         jwt.verify(token, process.env.JWT_ACCOUNT_ACTIVATION, (error, decode) => {
             if (error) {
                 console.log('Ссылка устарела')
-                return res.json('401').json({
+                return res.status(401).json({
                     error: 'Ссылка устарела.'
                 })
             }
