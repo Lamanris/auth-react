@@ -88,7 +88,8 @@ export const signin = (req,res) => {
         const token = jwt.sign({_id: user._id, email, name, role},process.env.JWT_ACCOUNT_SIGNIN, {expiresIn: '7d'})
         return res.json({
             token,
-            user: {_id, email, name, role}
+            user: {_id, email, name, role},
+            message: 'Вы успешно зашли'
         })
     })
 }
